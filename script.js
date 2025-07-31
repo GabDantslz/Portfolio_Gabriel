@@ -1,8 +1,29 @@
-// === SCROLLSPY: Ativa link no menu ao rolar a página
+// === SCROLLSPY: Ativa link no menu ao rolar a página ===
 const links = document.querySelectorAll('.cabecalho__menu__link');
 const secoes = document.querySelectorAll('section');
 const header = document.querySelector('.cabecalho');
 const headerAltura = header.offsetHeight;
+
+function iniciarRetornando() {
+  const nave = document.querySelector(".nave");
+  const imagem = document.querySelector(".apresentacao__imagem");
+  imagem.style.transform = "translateY(-200px) scale(0.3) skewX(30deg) skewY(10deg)";
+  nave.style.display = "block";
+  nave.classList.add("retornando");
+  imagem.style.opacity = "0";
+
+
+  setTimeout(() => {
+    imagem.style.transition = "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease";
+
+    nave.style.display = "block";
+    nave.classList.remove("retornando");
+    imagem.style.transform = "translateY(0) scale(1)";
+    imagem.style.opacity = "1";
+  },3000);
+}
+
+iniciarRetornando();
 
 function atualizarLinkAtivo() {
   let indexAtual = secoes.length;
@@ -34,7 +55,7 @@ links.forEach(link => {
 window.addEventListener('scroll', atualizarLinkAtivo);
 window.addEventListener('load', atualizarLinkAtivo);
 
-// === CARROSSEL DE PROJETOS (fade com botões e rotação automática)
+// === CARROSSEL DE PROJETOS (fade com botões e rotação automática) ===
 const cards = document.querySelectorAll('.carrossel__card');
 let cardAtual = 0;
 
@@ -61,27 +82,41 @@ setInterval(() => {
 
 mostrarCard(cardAtual);
 
-// === ABDUÇÃO
+// === ABDUÇÃO + RETORNO COM ALIEN ===
 function configurarAbducao() {
-  const nave = document.querySelector('.nave');
-  const imagem = document.querySelector('.apresentacao__imagem');
+  const nave = document.querySelector(".nave");
+  const imagem = document.querySelector(".apresentacao__imagem");
 
   if (!nave || !imagem) return;
 
-  nave.addEventListener('click', () => {
-    // anima a nave
-    nave.classList.add('abduzindo');
+  nave.addEventListener("click", () => {
+    // Inicia animação de abdução
+    nave.classList.add("abduzindo");
 
-    // anima a imagem do Gabriel
-    imagem.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s';
-    imagem.style.transform = 'translateY(-200px) scale(0.3)';
-    imagem.style.opacity = '0';
+    // ...existing code...
+    imagem.style.transition = "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease";
+    imagem.style.transform = "translateY(-200px) scale(0.3) skewX(30deg) skewY(10deg)";
+    imagem.style.opacity = "0";
 
-    // remove a nave após a animação
+    // ...existing code...
+
+    // Após a animação completa (3s), esconde a nave
     setTimeout(() => {
-      nave.remove();
+      nave.style.display = "none";
     }, 3000);
-  });
-}
+
+    setTimeout(() => {
+      nave.style.display = "block";
+      nave.classList.add("retornando");
+      nave.classList.remove("abduzindo");
+    }, 3000);
+
+
+    setTimeout(() => {
+      nave.classList.remove("retornando");
+      imagem.style.transform = "translateY(0) scale(1)";
+      imagem.style.opacity = "1";
+  },6000);
+})}
 
 configurarAbducao();

@@ -3,24 +3,26 @@ const links = document.querySelectorAll('.cabecalho__menu__link');
 const secoes = document.querySelectorAll('section');
 const header = document.querySelector('.cabecalho');
 const headerAltura = header.offsetHeight;
+const maxWidth = window.matchMedia("(max-width: 480px)");
 
 function iniciarRetornando() {
-  const nave = document.querySelector(".nave");
-  const imagem = document.querySelector(".apresentacao__imagem");
-  imagem.style.transform = "translateY(-200px) scale(0.3) skewX(30deg) skewY(10deg)";
-  nave.style.display = "block";
-  nave.classList.add("retornando");
-  imagem.style.opacity = "0";
-
-
-  setTimeout(() => {
-    imagem.style.transition = "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease";
-
+  if (maxWidth.matches=== false) {
+    const nave = document.querySelector(".nave");
+    const imagem = document.querySelector(".apresentacao__imagem");
+    imagem.style.transform = "translateY(-200px) scale(0.3) skewX(30deg) skewY(10deg)";
     nave.style.display = "block";
-    nave.classList.remove("retornando");
-    imagem.style.transform = "translateY(0) scale(1)";
-    imagem.style.opacity = "1";
-  },3000);
+    nave.classList.add("retornando");
+    imagem.style.opacity = "0";
+
+
+    setTimeout(() => {
+      imagem.style.transition = "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease";
+
+      nave.style.display = "block";
+      nave.classList.remove("retornando");
+      imagem.style.transform = "translateY(0) scale(1)";
+      imagem.style.opacity = "1";
+    },3000);}
 }
 
 iniciarRetornando();
@@ -84,39 +86,40 @@ mostrarCard(cardAtual);
 
 // === ABDUÇÃO + RETORNO COM ALIEN ===
 function configurarAbducao() {
-  const nave = document.querySelector(".nave");
-  const imagem = document.querySelector(".apresentacao__imagem");
+  if (maxWidth.matches=== false) {
+    const nave = document.querySelector(".nave");
+    const imagem = document.querySelector(".apresentacao__imagem");
 
-  if (!nave || !imagem) return;
+    if (!nave || !imagem) return;
 
-  nave.addEventListener("click", () => {
-    // Inicia animação de abdução
-    nave.classList.add("abduzindo");
+    nave.addEventListener("click", () => {
+      // Inicia animação de abdução
+      nave.classList.add("abduzindo");
 
-    // ...existing code...
-    imagem.style.transition = "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease";
-    imagem.style.transform = "translateY(-200px) scale(0.3) skewX(30deg) skewY(10deg)";
-    imagem.style.opacity = "0";
+      // ...existing code...
+      imagem.style.transition = "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease";
+      imagem.style.transform = "translateY(-200px) scale(0.3) skewX(30deg) skewY(10deg)";
+      imagem.style.opacity = "0";
 
-    // ...existing code...
+      // ...existing code...
 
-    // Após a animação completa (3s), esconde a nave
-    setTimeout(() => {
-      nave.style.display = "none";
-    }, 3000);
+      // Após a animação completa (3s), esconde a nave
+      setTimeout(() => {
+        nave.style.display = "none";
+      }, 3000);
 
-    setTimeout(() => {
-      nave.style.display = "block";
-      nave.classList.add("retornando");
-      nave.classList.remove("abduzindo");
-    }, 3000);
+      setTimeout(() => {
+        nave.style.display = "block";
+        nave.classList.add("retornando");
+        nave.classList.remove("abduzindo");
+      }, 3000);
 
 
-    setTimeout(() => {
-      nave.classList.remove("retornando");
-      imagem.style.transform = "translateY(0) scale(1)";
-      imagem.style.opacity = "1";
-  },6000);
-})}
+      setTimeout(() => {
+        nave.classList.remove("retornando");
+        imagem.style.transform = "translateY(0) scale(1)";
+        imagem.style.opacity = "1";
+    },6000);
+})}}
 
 configurarAbducao();

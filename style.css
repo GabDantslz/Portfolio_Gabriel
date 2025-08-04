@@ -455,7 +455,7 @@ body {
 @media (max-width: 480px) {
   .cabecalho {
     padding: 10px;
-    overflow-x: auto;
+    overflow: auto;
   }
 
   .cabecalho__menu {

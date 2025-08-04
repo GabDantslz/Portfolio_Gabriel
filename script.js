@@ -67,7 +67,7 @@ function mostrarCard(index) {
 
 document.getElementById('avancar').addEventListener('click', () => {
   cardAtual = (cardAtual + 1) % cards.length;
-  mostrarCard(cardAtual);
+  mostrarCard(cardAtual); 
 });
 
 document.getElementById('voltar').addEventListener('click', () => {

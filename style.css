@@ -24,6 +24,7 @@ body {
   background-color: var(--cor-secundaria);
   color: var(--cor-fonte);
   font-family: var(--fonte-secundaria);
+  overflow-x: hidden;
 }
 
 .cabecalho {

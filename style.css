@@ -451,7 +451,7 @@ body {
   background-color: var(--cor-do-hover);
 }
 
-/* RESPONSIVO */
+/* RESPONSIVIDADE */
 @media (max-width: 480px) {
   .cabecalho {
     padding: 10px;
@@ -558,5 +558,108 @@ body {
 
   .titulo__com-et {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .cabecalho {
+    padding: 12px;
+  }
+
+  .cabecalho__menu {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cabecalho__menu__link {
+    font-size: 1.05rem;
+  }
+
+  .apresentacao {
+    margin: 120px 8%;
+  }
+
+  .apresentacao__sobre {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .apresentacao__conteudo__titulo {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .apresentacao__conteudo__texto {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .apresentacao__links {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .mais__conteudo {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .skill__card {
+    width: 45%;
+    max-width: 220px;
+  }
+
+  .carrossel__cards {
+    height: auto;
+  }
+
+  .nave {
+    width: 65%;
+    bottom: 75%;
+  }
+}
+
+/* =========================
+   AJUSTES PARA TABLETS GRANDES E NOTEBOOKS PEQUENOS
+   (769px até 1024px)
+   ========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cabecalho {
+    padding: 15px 0 15px 8%;
+  }
+
+  .cabecalho__menu {
+    gap: 40px;
+  }
+
+  .cabecalho__menu__link {
+    font-size: 1.15rem;
+  }
+
+  .apresentacao {
+    margin: 8% 10%;
+  }
+
+  .apresentacao__sobre {
+    gap: 60px;
+  }
+
+  .apresentacao__conteudo__titulo {
+    font-size: 2.1rem;
+  }
+
+  .apresentacao__conteudo__texto {
+    font-size: 1.35rem;
+  }
+
+  .skill__card {
+    width: 30%;
+    max-width: 230px;
+  }
+
+  .carrossel__cards {
+    max-width: 500px;
   }
 }

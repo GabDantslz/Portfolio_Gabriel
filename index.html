@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="shortcut icon" type="image/x-icon" href="./assets/alien_dev.png">
 </head>
+
 <body>
 
   <header class="cabecalho">
@@ -21,99 +23,131 @@
     </nav>
   </header>
 
-  <main class="apresentacao">
-
-    <!-- SOBRE -->
-    <section id="sobre" class="apresentacao__sobre">
-      <div class="apresentacao__conteudo">
-        <h1 class="apresentacao__conteudo__titulo">
-          Transforme suas ideias em sistemas reais
-          <strong class="titulo-destaque">com um Back-end de excelência!</strong>
-        </h1>
-        <p class="apresentacao__conteudo__texto">
-          Olá! Sou <strong>Gabriel Arthur Dantas</strong>, desenvolvedor Back-end em formação com
-          <strong class="linguagem__cor">Javascript e Python</strong>, além de
-          <strong class="linguagem__cor">GDscript</strong> para desenvolvimento de jogos.
-          Estou disposto a trabalhar para criar soluções! Podemos conversar?
-        </p>
-      </div>
-
-      <div class="apresentacao__imagem__container">
-        <img class="nave" src="./assets/U.F.O.png" alt="Nave espacial" />
-        <img class="apresentacao__imagem" src="./assets/Imagem.png" alt="Foto do Gabriel Arthur" />
-      </div>
-    </section>
-
-    <!-- MAIS SOBRE MIM -->
-    <section id="mais-sobre" class="apresentacao__mais">
-      <div class="titulo__com-dois-ets">
-        <img src="./assets/ET_estudando.png" alt="ET estudando" class="et__estudando" />
-        <h2 class="secao__titulo">Mais sobre mim</h2>
-        <img src="./assets/ET_estudando.png" alt="ET invertido" class="et__estudando et__invertido" />
-      </div>
-
-      <div class="mais__conteudo">
-        <p>Gosto de programação, e estou sempre buscando aprender coisas novas, como por exemplo melhorar minhas <strong>boas práticas de programação</strong>, <strong>reforçar meus conhecimentos</strong>.</p>
-        <p>Tenho o hobby de <strong>desenvolvimento de jogos</strong>. Pretendo trabalhar profissionalmente com essa área futuramente também.</p>
-        <p>Além do desenvolvimento, gosto muito de <strong>conversar e compartilhar</strong> o que aprendo, criando projetos. Estou em constante evolução!</p>
-        <p>Meu objetivo é me tornar um <strong>desenvolvedor back-end competente</strong>, dominando tecnologias modernas, arquitetura de software e entregando soluções que realmente façam a diferença.</p>
-      </div>
-    </section>
-
-    <!-- PROJETOS -->
-    <section id="projetos" class="apresentacao__projetos">
-      <h2 class="secao__titulo">Projetos</h2>
-      <div class="carrossel__unico">
-        <div class="carrossel__cards">
-          <a class="carrossel__card ativo" href="https://seu-portfolio.com" target="_blank">
-            <h3>Site Portfólio</h3>
-            <p>Projeto pessoal feito com HTML, CSS e JavaScript para apresentar meus trabalhos.</p>
-          </a>
-          <a class="carrossel__card" href="https://github.com/GabDantslz/seu-jogo-godot" target="_blank">
-            <h3>Jogo 2D - Godot</h3>
-            <p>Jogo de plataforma simples feito com GDScript usando Godot Engine.</p>
-          </a>
-          <a class="carrossel__card" href="https://jogo-ten-delta-65.vercel.app/" target="_blank">
-            <h3>Jogo do Número Secreto</h3>
-            <p>Jogo de adivinhação feito em JavaScript.</p>
-          </a>
+  <div class="colunaApresentação">
+    <div class="imageColumm">
+      <img/>
+    </div>
+    <main class="apresentacao">
+      <!-- SOBRE -->
+      <section id="sobre" class="apresentacao__sobre">
+        <div class="apresentacao__conteudo">
+          <h1 class="apresentacao__conteudo__titulo">
+            Transforme suas ideias em sistemas reais
+            <strong class="titulo-destaque">com um Back-end de excelência!</strong>
+          </h1>
+          <p class="apresentacao__conteudo__texto">
+            Olá! Sou <strong>Gabriel Arthur Dantas</strong>, desenvolvedor Back-end em formação com
+            <strong class="linguagem__cor">Javascript e Python</strong>, além de
+            <strong class="linguagem__cor">GDscript</strong> para desenvolvimento de jogos.
+            Estou disposto a trabalhar para criar soluções! Podemos conversar?
+          </p>
         </div>
-        <div class="carrossel__botoes">
-          <button id="voltar" class="carrossel__botao">◀</button>
-          <button id="avancar" class="carrossel__botao">▶</button>
+
+        <div class="apresentacao__imagem__container">
+          <img class="nave" src="./assets/U.F.O.png" alt="Nave espacial" />
+          <img class="apresentacao__imagem" src="./assets/Imagem.png" alt="Foto do Gabriel Arthur" />
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="apresentacao__skills">
-      <h2 class="secao__titulo">Skills</h2>
-      <div class="skills__grid">
-        <div class="skill__card">JavaScript <br><p class="nivel">Crio interfaces interativas e efeitos para sites.</p></div>
-        <div class="skill__card">Python <br><p class="nivel">Automatizo tarefas (futuramente pretendo estudar dados).</p></div>
-        <div class="skill__card">GDScript <br><p class="nivel">Desenvolvimento de jogos com a engine Godot e a sua linguagem.</p></div>
-        <div class="skill__card">HTML e CSS <br><p class="nivel">Estruturo e estilizo sites modernos.</p></div>
-      </div>
-    </section>
+      <!-- MAIS SOBRE MIM -->
+      <section id="mais-sobre" class="apresentacao__mais">
+        <div class="titulo__com-dois-ets">
+          <img src="./assets/ET_estudando.png" alt="ET estudando" class="et__estudando" />
+          <h2 class="secao__titulo">Mais sobre mim</h2>
+          <img src="./assets/ET_estudando.png" alt="ET invertido" class="et__estudando et__invertido" />
+        </div>
 
-    <!-- CONTATOS -->
-    <section id="contatos" class="apresentacao__links__container">
-      <h2 class="informacao">Para saber mais sobre mim, acesse:</h2>
-      <div class="apresentacao__links">
-        <a class="apresentacao__links__link" href="https://instagram.com/gab.a.dantas" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-        <a class="apresentacao__links__link" href="https://github.com/GabDantslz" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
-        <a class="apresentacao__links__link" href="https://linkedin.com/in/gabriel-arthur-dantas-de-araujo-146242365/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-      </div>
-    </section>
-  </main>
+        <div class="mais__conteudo">
+          <p>Gosto de programação, e estou sempre buscando aprender coisas novas, como por exemplo melhorar minhas
+            <strong>boas práticas de programação</strong>, <strong>reforçar meus conhecimentos</strong>.
+          </p>
+          <p>Tenho o hobby de <strong>desenvolvimento de jogos</strong>. Pretendo trabalhar profissionalmente com essa
+            área futuramente também.</p>
+          <p>Além do desenvolvimento, gosto muito de <strong>conversar e compartilhar</strong> o que aprendo, criando
+            projetos. Estou em constante evolução!</p>
+          <p>Meu objetivo é me tornar um <strong>desenvolvedor back-end competente</strong>, dominando tecnologias
+            modernas, arquitetura de software e entregando soluções que realmente façam a diferença.</p>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section id="projetos" class="apresentacao__projetos">
+        <h2 class="secao__titulo">Projetos</h2>
+        <div class="carrossel__unico">
+          <div class="carrossel__cards">
+
+            <a class="carrossel__card" href="https://github.com/GabDantslz/seu-jogo-godot" target="_blank">
+              <div class="carrosselLeft">
+                <img src="./assets/jogo.png" alt="jogo_clicker">
+              </div>
+              <div class="carrosselRight">
+                <h3>Potato Clicker - Godot</h3>
+                <p>Jogo clicker simples feito com GDScript usando Godot Engine.</p>
+              </div>
+            </a>
+            <a class="carrossel__card" href="https://jogo-ten-delta-65.vercel.app/" target="_blank">
+              <div class="carrosselLeft">
+                <img src="./assets/num_sec.png" alt="jogo do numero secreto">
+              </div>
+              <div class="carrosselRight">
+                <h3>Jogo do Número Secreto</h3>
+                <p>Jogo de adivinhação feito em JavaScript.</p>
+              </div>
+            </a>
+
+          </div>
+          <div class="carrossel__botoes">
+            <button id="voltar" class="carrossel__botao">◀</button>
+            <button id="avancar" class="carrossel__botao">▶</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="apresentacao__skills">
+        <h2 class="secao__titulo">Skills</h2>
+        <div class="skills__grid">
+          <div class="skill__card">JavaScript <br>
+            <p class="nivel">Crio interfaces interativas e efeitos para sites.</p>
+          </div>
+          <div class="skill__card">Python <br>
+            <p class="nivel">Automatizo tarefas (futuramente pretendo estudar dados).</p>
+          </div>
+          <div class="skill__card">GDScript <br>
+            <p class="nivel">Desenvolvimento de jogos com a engine Godot e a sua linguagem.</p>
+          </div>
+          <div class="skill__card">HTML e CSS <br>
+            <p class="nivel">Estruturo e estilizo sites modernos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATOS -->
+      <section id="contatos" class="apresentacao__links__container">
+        <h2 class="informacao">Para saber mais sobre mim, acesse:</h2>
+        <div class="apresentacao__links">
+          <a class="apresentacao__links__link" href="https://linkedin.com/in/gabriel-arthur-dantas-de-araujo-146242365/"
+            target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+          <a class="apresentacao__links__link" href="https://github.com/GabDantslz" target="_blank"><i
+              class="fab fa-github"></i><span>GitHub</span></a>
+          <a class="apresentacao__links__link" href="https://instagram.com/gab.a.dantas" target="_blank"><i
+              class="fab fa-instagram"></i><span>Instagram</span></a>
+        </div>
+      </section>
+    </main>
+    <div class="imageColumm">
+      <img/>
+    </div>
+  </div>
 
   <footer class="rodape">
     <img src="./assets/etvogado.png" alt="et advogado" class="et-footer" />
     <p>&copy; 2025 Gabriel Arthur. Todos os direitos reservados.</p>
-    <img src="./assets/etvogado.png" alt="et advogado" class="et-footer et__invertido" alt="ET estudando invert"/>
+    <img src="./assets/etvogado.png" alt="et advogado" class="et-footer et__invertido" alt="ET estudando invert" />
   </footer>
 
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>

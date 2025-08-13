@@ -32,6 +32,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px;
   background-color: transparent;
   backdrop-filter: blur(20px);
   z-index: 9999;
@@ -53,8 +54,25 @@ body {
   cursor: pointer;
 }
 
+.colunaApresentação {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.imageColumm {
+  width: 25vw;
+}
+
+.imageColumm img {
+  width: 100%;
+  height: 100%;
+  background: url("./assets/espaco.png");
+  background-repeat: repeat;
+}
+
 .apresentacao {
-  margin: 10% 15%;
+  margin: 10% 10%;
 }
 
 .apresentacao > section {
@@ -391,6 +409,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 250px;
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -403,13 +422,33 @@ body {
   font-family: var(--fonte-secundaria);
   box-shadow: 0 0 10px #00000030;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: row;
 }
 
 .carrossel__card.ativo {
   opacity: 1;
   transform: scale(1);
   z-index: 1;
+}
+
+.carrosselLeft {
+  width: 50%;
+  height: 100%;
+}
+
+.carrosselLeft img {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.carrosselRight {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .carrossel__unico {
@@ -423,7 +462,6 @@ body {
 .carrossel__cards {
   width: 100%;
   position: relative;
-  max-width: 600px;
   height: 250px;
 }
 

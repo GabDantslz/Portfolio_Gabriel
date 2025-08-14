@@ -62,6 +62,7 @@ body {
 
 .imageColumm {
   width: 25vw;
+  overflow: hidden;
 }
 
 .imageColumm img {
@@ -123,65 +124,6 @@ body {
   transform: translateX(-50%);
   bottom: 90%;
   cursor: pointer;
-}
-
-.nave.abduzindo {
-  animation: voarParaEsquerda 3s forwards ease-in-out;
-}
-
-@keyframes voarParaEsquerda {
-  0% {
-    transform: translateX(-50%) translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(300%) translateY(0px) scale(1);
-    opacity: 0;
-  }
-}
-
-.nave.retornando {
-  animation: voarParaDireita 3s forwards ease-in-out;
-}
-
-@keyframes voarParaDireita {
-  0% {
-    transform: translateX(300%) translateY(0) scale(1);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-50%) translateY(0) scale(1);
-    opacity: 1;
-  }
-}
-
-.apresentacao__imagem.abduzida {
-  animation: subirImagem 2s forwards;
-}
-
-@keyframes abduzir-lateral {
-  0% {
-    transform: translateX(-50%) translateY(0) scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(0%) translateY(0) scale(1);
-  }
-  100% {
-    transform: translateX(200%) translateY(0) scale(1);
-    opacity: 0;
-  }
-}
-
-@keyframes subirImagem {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
 }
 
 .apresentacao__imagem {
@@ -381,17 +323,7 @@ body {
   display: none;
 }
 
-/* Quando o alien entra em cena */
-.alien-reversor-container.mostrar {
-  right: 30px;
-}
 
-/* Reaparecer imagem */
-.apresentacao__imagem.reaparecer {
-  animation: voltarImagem 1s ease-in-out forwards;
-}
-
-/* CARROSSEL */
 .carrossel__container {
   overflow: hidden;
   width: 100%;
@@ -510,11 +442,6 @@ body {
 
   .apresentacao {
     margin: 100px 5%;
-  }
-
-  .apresentacao__imagem {
-    width: 90%;
-    max-width: 300px;
   }
 
   .apresentacao__sobre {
@@ -653,6 +580,11 @@ body {
     height: auto;
   }
 
+  .apresentacao__imagem {
+  max-width: 250px;
+  padding-top: 18%;
+  }
+
   .nave {
     width: 65%;
     bottom: 75%;
@@ -699,5 +631,51 @@ body {
 
   .carrossel__cards {
     max-width: 500px;
+  }
+}
+
+@media (min-width: 1025px){
+  .nave.abduzindo {
+  animation: voarParaEsquerda 3s forwards ease-in-out;
+  }
+
+  @keyframes voarParaEsquerda {
+    0% {
+      transform: translateX(-50%) translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(300%) translateY(0px) scale(1);
+      opacity: 0;
+    }
+  }
+
+  .nave.retornando {
+    animation: voarParaDireita 3s forwards ease-in-out;
+  }
+
+  @keyframes voarParaDireita {
+    0% {
+      transform: translateX(300%) translateY(0) scale(1);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-50%) translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes abduzir-lateral {
+    0% {
+      transform: translateX(-50%) translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(0%) translateY(0) scale(1);
+    }
+    100% {
+      transform: translateX(200%) translateY(0) scale(1);
+      opacity: 0;
+    }
   }
 }
